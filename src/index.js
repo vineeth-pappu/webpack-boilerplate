@@ -7,6 +7,9 @@ import webpackLogo from '@/images/webpack-logo.svg'
 // Test import of styles
 import '@/styles/index.scss'
 
+import './components/header'
+import AppHeader from './components/header/header'
+
 // Appending to the DOM
 const logo = document.createElement('img')
 logo.src = webpackLogo
@@ -14,5 +17,7 @@ logo.src = webpackLogo
 const heading = document.createElement('h1')
 heading.textContent = example()
 
+const appHeader = new AppHeader()
+
 const app = document.querySelector('#root')
-app.append(logo, heading)
+app.append(logo, heading, appHeader)
